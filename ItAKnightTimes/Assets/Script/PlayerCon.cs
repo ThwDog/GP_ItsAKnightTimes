@@ -8,9 +8,14 @@ public class PlayerCon : MonoBehaviour
     float horizontal;
     float vertical;
     public float speed;
+    public float dashDis = 15f;
+    public float dashCount = 3;
+    public float dash_de;
+    public float delay;
     public Vector2 moveDir;
     public Vector2 bullDir;
-    
+    public bool canFire;
+
     
     public Animator anim;
    
@@ -29,6 +34,7 @@ public class PlayerCon : MonoBehaviour
     {
         walk();
         fire();
+        dash();
     }
 
     void walk()
@@ -83,15 +89,25 @@ public class PlayerCon : MonoBehaviour
 
 
         RB.velocity = new Vector2(horizontal * speed, vertical * speed);
+
+        
     }
 
     void fire()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKey("space") && canFire == true)
         {
-            Bullet instBullet = Instantiate(bullet, gun.position, gun.rotation);
-            instBullet.bullDir = bullDir;
+            StartCoroutine(shoot_delay());
         }
+    }
+
+    IEnumerator shoot_delay()
+    {
+        Bullet instBullet = Instantiate(bullet, gun.position, gun.rotation);
+        instBullet.bullDir = bullDir;
+        canFire = false;   
+        yield return new WaitForSeconds(delay);
+        canFire = true;
     }
 
     float normalizefloat(float num)
@@ -112,5 +128,27 @@ public class PlayerCon : MonoBehaviour
     void campos()
     {
 
+    }
+
+    void dash()
+    {
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && dashCount <= 3)
+        {
+            RB.velocity = new Vector2(horizontal * dashDis, vertical * dashDis);
+            dashCount++;
+            StartCoroutine(dash_delay());
+        }
+    }
+
+    IEnumerator dash_delay()
+    {
+        if (dashCount > 3)
+        {
+            yield return new WaitForSeconds(dash_de);
+            dashCount = 0;
+        }
     }
 }

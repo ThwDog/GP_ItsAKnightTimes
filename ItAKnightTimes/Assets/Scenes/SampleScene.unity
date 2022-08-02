@@ -408,8 +408,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  dashDis: 100
+  dashCount: 3
+  dash_de: 3
+  delay: 0.2
   moveDir: {x: 0, y: 0}
   bullDir: {x: 0, y: 0}
+  canFire: 1
   anim: {fileID: 2027892890}
   bullet: {fileID: 2016595406274261335, guid: d7200b592a8cf814b930736491ad48a2, type: 3}
   gun: {fileID: 2027892889}
