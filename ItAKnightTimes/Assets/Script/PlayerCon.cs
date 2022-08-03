@@ -8,10 +8,23 @@ public class PlayerCon : MonoBehaviour
     float horizontal;
     float vertical;
     public float speed;
-    public float dashDis = 15f;
-    public float dashCount = 3;
-    public float dash_de;
-    public float delay;
+
+    public UiControll uiGame;
+
+    [Header ("Dash System")]
+    public float dashSpeed;
+    public float dashTime;
+    public float staminaMax;
+    public float staminaCurrent;
+    public float staminaRegen;
+    public float staminaCost;
+    bool is_dash;
+
+    [Header("HP System")]
+    public float hpMax;
+    public float hpCost;
+
+    public float bulletDelay;
     public Vector2 moveDir;
     public Vector2 bullDir;
     public bool canFire;
@@ -41,6 +54,7 @@ public class PlayerCon : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+        moveDir = new Vector2(horizontal, vertical);
 
         //walk right
         if (Input.GetAxis("Horizontal")  > 0)
@@ -88,9 +102,14 @@ public class PlayerCon : MonoBehaviour
         RB.velocity = new Vector2(RB.velocity.x, vertical * speed);*/
 
 
-        RB.velocity = new Vector2(horizontal * speed, vertical * speed);
-
-        
+        move_player();
+    }
+    void move_player()
+    {
+        if(!is_dash)
+        {
+            RB.velocity = new Vector2(horizontal * speed, vertical * speed);
+        }      
     }
 
     void fire()
@@ -106,7 +125,7 @@ public class PlayerCon : MonoBehaviour
         Bullet instBullet = Instantiate(bullet, gun.position, gun.rotation);
         instBullet.bullDir = bullDir;
         canFire = false;   
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(bulletDelay);
         canFire = true;
     }
 
@@ -132,23 +151,49 @@ public class PlayerCon : MonoBehaviour
 
     void dash()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) && dashCount <= 3)
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            RB.velocity = new Vector2(horizontal * dashDis, vertical * dashDis);
-            dashCount++;
-            StartCoroutine(dash_delay());
+            if (staminaCurrent > staminaCost)
+            {
+                StartCoroutine(dash_event(moveDir));
+                staminaCurrent -= staminaCost;
+            }
         }
+
+        staminaCurrent += Time.deltaTime * staminaRegen;
+        staminaCurrent = Mathf.Clamp(staminaCurrent, 0, staminaMax);
+        uiGame.staChange("Stamina : " + staminaCurrent.ToString());
+
+
     }
 
-    IEnumerator dash_delay()
+
+    IEnumerator dash_event(Vector2 dashDir)
     {
-        if (dashCount > 3)
+        is_dash = true;
+        float elasTime = 0;
+
+        while(elasTime < dashTime)
         {
-            yield return new WaitForSeconds(dash_de);
-            dashCount = 0;
+            RB.velocity = dashDir * dashSpeed;
+            elasTime += Time.deltaTime;
+            yield return null;
+        }
+        is_dash = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if ( collision.gameObject.tag == "Enemy")
+        {
+            hpMax -= hpCost;
+            uiGame.hpChange("HP : " + hpMax.ToString());
+            if (hpMax <= 0)
+            {
+                Debug.Log("DEAD");
+                //Destroy(gameObject);
+            }
+
         }
     }
 }
