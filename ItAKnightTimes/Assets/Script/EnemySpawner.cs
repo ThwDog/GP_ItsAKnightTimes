@@ -18,6 +18,14 @@ public class EnemySpawner : MonoBehaviour
             StartCoroutine(spawnEnemy(spawnTime, enemy));
     }
 
+    void Update()
+    {
+        if (canSpaewn == false)
+        {
+            StopCoroutine(spawnEnemy(spawnTime, enemy));
+        }
+    }
+
     IEnumerator spawnEnemy(float spawnTime, GameObject enemy)
     {
         yield return new WaitForSeconds(spawnTime);
@@ -25,11 +33,7 @@ public class EnemySpawner : MonoBehaviour
         spawnCount++;
         if (spawnCount == 15)
         {
-            canSpaewn = false;
-            if (canSpaewn == false)
-            {
-                StopCoroutine(spawnEnemy(spawnTime, enemy));
-            }
+            canSpaewn = false; 
         }
         StartCoroutine(spawnEnemy(spawnTime, enemy));
     }
