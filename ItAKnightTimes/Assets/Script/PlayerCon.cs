@@ -192,10 +192,12 @@ public class PlayerCon : MonoBehaviour
             uiGame.hpChange("HP : " + hpMax.ToString());
             if (hpMax <= 0)
             {
+                Destroy(gameObject);
                 Debug.Log("DEAD");
-                //Destroy(gameObject);
+                FindObjectOfType<GameManage>().Dead();
             }
 
         }
     }
+
 }

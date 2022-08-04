@@ -16,7 +16,6 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Physics2D.IgnoreCollision(bullPerfab.GetComponent<Collider2D>(),GetComponent<Collider2D>());
     }
 
     // Update is called once per frame
