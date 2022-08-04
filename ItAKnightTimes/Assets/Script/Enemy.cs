@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy Alibity")]
     public float enemySpeed;
 
-    public Transform player;
+    GameObject player;
     Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -23,7 +24,16 @@ public class Enemy : MonoBehaviour
 
     void follow()
     {
-        Vector2 playerDir = player.position - transform.position;
+        player = GameObject.Find("player");
+        Vector2 playerDir = player.transform.position - transform.position;
         rb.velocity = playerDir * enemySpeed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            Destroy(gameObject);
+        }
     }
 }

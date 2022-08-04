@@ -24,12 +24,9 @@ public class UiControll : MonoBehaviour
     public void hpChange(string text)
     {
         hpText.text = text;
-        staminaText.text = text;
-
     }
     public void staChange(string text)
     {
         staminaText.text = text;
-
     }
 }

@@ -24,6 +24,7 @@ public class PlayerCon : MonoBehaviour
     public float hpMax;
     public float hpCost;
 
+    [Header("Bullet System")]
     public float bulletDelay;
     public Vector2 moveDir;
     public Vector2 bullDir;
@@ -47,7 +48,7 @@ public class PlayerCon : MonoBehaviour
     {
         walk();
         fire();
-        dash();
+        dash();  
     }
 
     void walk()
@@ -162,7 +163,8 @@ public class PlayerCon : MonoBehaviour
 
         staminaCurrent += Time.deltaTime * staminaRegen;
         staminaCurrent = Mathf.Clamp(staminaCurrent, 0, staminaMax);
-        uiGame.staChange("Stamina : " + staminaCurrent.ToString());
+
+        uiGame.staChange("Stamina : " + staminaCurrent.ToString("0"));
 
 
     }
