@@ -30,7 +30,10 @@ public class PlayerCon : MonoBehaviour
     public Vector2 bullDir;
     public bool canFire;
 
-    
+    [Header("Cam System")]
+    public Transform mainCam;
+    public float camFollSpeed;
+
     public Animator anim;
    
     Rigidbody2D RB;
@@ -48,7 +51,8 @@ public class PlayerCon : MonoBehaviour
     {
         walk();
         fire();
-        dash();  
+        dash();
+        camFoll();
     }
 
     void walk()
@@ -60,33 +64,38 @@ public class PlayerCon : MonoBehaviour
         //walk right
         if (Input.GetAxis("Horizontal")  > 0)
         {
-            anim.SetBool("Right", true);
+            anim.SetBool("Move", true);
             //Debug.Log("r");
             transform.localScale = new Vector3(1,1,1);
         }
         //walk left
         if (Input.GetAxis("Horizontal") < 0)
         {
-            anim.SetBool("Left", true);
+            anim.SetBool("Move", true);
             //Debug.Log("l");
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
         if (horizontal == 0)
         {
-            anim.SetBool("Left", false);
-            anim.SetBool("Right", false);
+            anim.SetBool("Move", false);
         }
 
         //walk up
         if (Input.GetAxis("Vertical") > 0)
         {
+            anim.SetBool("MoveUp", true);
             //Debug.Log("u");
         }
         //walk down
         if (Input.GetAxis("Vertical") < 0)
         {
             //Debug.Log("d");
+        }
+
+        if (vertical == 0)
+        {
+            anim.SetBool("MoveUp", false);
         }
 
         //???????????
@@ -123,7 +132,7 @@ public class PlayerCon : MonoBehaviour
 
     IEnumerator shoot_delay()
     {
-        Bullet instBullet = Instantiate(bullet, gun.position, gun.rotation);
+        Bullet instBullet = Instantiate(bullet, gun.position, bullet.transform.rotation);
         instBullet.bullDir = bullDir;
         canFire = false;   
         yield return new WaitForSeconds(bulletDelay);
@@ -192,12 +201,24 @@ public class PlayerCon : MonoBehaviour
             uiGame.hpChange("HP : " + hpMax.ToString());
             if (hpMax <= 0)
             {
-                Destroy(gameObject);
+                anim.Play("ImDead");
+                speed = 0;
                 Debug.Log("DEAD");
-                FindObjectOfType<GameManage>().Dead();
+                StartCoroutine(imDead());
             }
 
         }
     }
 
+    IEnumerator imDead()
+    {
+        yield return new WaitForSeconds(3f);
+        FindObjectOfType<GameManage>().Dead();
+    }
+
+    void camFoll()
+    {
+        Vector3 followPosition = new Vector3(transform.position.x, transform.position.y, -10f);
+        mainCam.position = Vector3.Lerp(mainCam.position, followPosition, Time.deltaTime * camFollSpeed);
+    }
 }
