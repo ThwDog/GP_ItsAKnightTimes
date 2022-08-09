@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3e4fcaed8decde14083bc03e52e23a35
+guid: a9ab66da624bf9f47be0cb0b4e60ecee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -100,11 +100,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playerDeath32_18_0
+      name: playerDeath32_18 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49d013c2f8bbe9548a9372c730b7956c
-      internalID: -1750844680
+      spriteID: a3e1dc709dcf75f48afc1c2083c88620
+      internalID: -2124475165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerDeath32_18_1
+      name: playerDeath32_18 1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -139,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91dfebe632b473a49b50fb58363a09c4
-      internalID: -166924344
+      spriteID: 8d0697cf7233ce04daa1b468c0482096
+      internalID: 1947791210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerDeath32_18_2
+      name: playerDeath32_18 1_2
       rect:
         serializedVersion: 2
         x: 64
@@ -160,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43e211744710c1742b0c319989c31cce
-      internalID: 1439346978
+      spriteID: 340add34ccfb2a84d8f5aaa6be0e1776
+      internalID: -1089546927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerDeath32_18_3
+      name: playerDeath32_18 1_3
       rect:
         serializedVersion: 2
         x: 96
@@ -181,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9622b7ad92f63c428111c222d9fe01e
-      internalID: -198575253
+      spriteID: 0978cbf83752b0e43a6748f53ce9eae2
+      internalID: -234190249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerDeath32_18_4
+      name: playerDeath32_18 1_4
       rect:
         serializedVersion: 2
         x: 128
@@ -202,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10668b65456d73e4baf20e85a1e05cab
-      internalID: -1321281716
+      spriteID: 9b4d063ad008c77449a1bf6632e5b037
+      internalID: -1567157361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerDeath32_18_5
+      name: playerDeath32_18 1_5
       rect:
         serializedVersion: 2
         x: 160
@@ -223,14 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8b22667748bb164d94a2b1dd538e38d
-      internalID: 65287148
+      spriteID: 33c87f0a2e7a6a64cb6be9210239c86e
+      internalID: 302479177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerDeath32_18_6
+      name: playerDeath32_18 1_6
       rect:
         serializedVersion: 2
         x: 192
@@ -244,14 +256,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4696114b1d676934eb712f5e8159a7bf
-      internalID: 1380531371
+      spriteID: 1ffdbec20fe29ab4da14eb33c00a0a53
+      internalID: 1499554808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerDeath32_18_7
+      name: playerDeath32_18 1_7
       rect:
         serializedVersion: 2
         x: 224
@@ -265,14 +277,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4187a2907565b35438880e67e298c4cd
-      internalID: -942311286
+      spriteID: 9a22948317e7d3443852c1a5cf462d0c
+      internalID: 1166252759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerDeath32_18_8
+      name: playerDeath32_18 1_8
       rect:
         serializedVersion: 2
         x: 256
@@ -286,14 +298,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d2cd3ff8006d9641970f85eb7412b61
-      internalID: -647320219
+      spriteID: bc67e1dd4e984b04793119803b1cc3fd
+      internalID: 1701892971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerDeath32_18_9
+      name: playerDeath32_18 1_9
       rect:
         serializedVersion: 2
         x: 288
@@ -307,14 +319,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f9746d8dbf096e468ca4838ed18c232
-      internalID: -914644615
+      spriteID: a273539091b86c34593b3120f89082d0
+      internalID: -1754291603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playerDeath32_18_10
+      name: playerDeath32_18 1_10
       rect:
         serializedVersion: 2
         x: 320
@@ -328,8 +340,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dabaf07985c2e2e468600d17c0a8acc9
-      internalID: -911527789
+      spriteID: cb5f1efcdc5a0394cb48ad4c47d34525
+      internalID: -2041090743
       vertices: []
       indices: 
       edges: []
@@ -345,17 +357,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      playerDeath32_18_1: -166924344
-      playerDeath32_18_4: -1321281716
-      playerDeath32_18_8: -647320219
-      playerDeath32_18_0: -1750844680
-      playerDeath32_18_7: -942311286
-      playerDeath32_18_3: -198575253
-      playerDeath32_18_2: 1439346978
-      playerDeath32_18_10: -911527789
-      playerDeath32_18_6: 1380531371
-      playerDeath32_18_9: -914644615
-      playerDeath32_18_5: 65287148
+      playerDeath32_18 1_7: 1166252759
+      playerDeath32_18 1_0: -2124475165
+      playerDeath32_18 1_2: -1089546927
+      playerDeath32_18 1_4: -1567157361
+      playerDeath32_18 1_1: 1947791210
+      playerDeath32_18 1_3: -234190249
+      playerDeath32_18 1_8: 1701892971
+      playerDeath32_18 1_6: 1499554808
+      playerDeath32_18 1_5: 302479177
+      playerDeath32_18 1_9: -1754291603
+      playerDeath32_18 1_10: -2041090743
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
