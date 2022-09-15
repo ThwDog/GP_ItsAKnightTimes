@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e3fefceae1a91942893c634e012da1c
+guid: ad475359eddae9f43b56dd68381b6ca1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cPlayerAll16_16t 1_0
+      name: BoneDeath32_18 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,41 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ab461b5131159b458282488ccc19802
-      internalID: 1010790231
+      spriteID: 0f073c2bc561acc488fafcd96f6dd4ea
+      internalID: -1763027310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cPlayerAll16_16t 1_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 138d046bd9932484db8aa086e44a01ac
-      internalID: 2037875319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cPlayerAll16_16t 1_2
+      name: BoneDeath32_18 1_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,41 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 549dd27b527af8f4483b27eef2a87292
-      internalID: -890514625
+      spriteID: e2423893bf258e34dbafe8ba8292b42c
+      internalID: -856600500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cPlayerAll16_16t 1_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bdad5461915be04c9571a2b30393d44
-      internalID: -1526681073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cPlayerAll16_16t 1_4
+      name: BoneDeath32_18 1_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c50484a538cd61a4b942c895ab60a7cf
-      internalID: -182591838
+      spriteID: 355d53ae5d63e0e46ae10cae5d54a033
+      internalID: -2064797831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cPlayerAll16_16t 1_5
+      name: BoneDeath32_18 1_3
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +193,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db98c410da9417442953db134c987711
-      internalID: -1257811718
+      spriteID: 74ee0f3fd1a4b5146976238320c4dedb
+      internalID: -2107585798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoneDeath32_18 1_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5955db7d87c52f3438f73e26cf89b804
+      internalID: 739517090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoneDeath32_18 1_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee1179ddad209f44948fa24039dc1b5
+      internalID: -499809876
       vertices: []
       indices: 
       edges: []
@@ -252,12 +252,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cPlayerAll16_16t 1_5: -1257811718
-      cPlayerAll16_16t 1_0: 1010790231
-      cPlayerAll16_16t 1_2: -890514625
-      cPlayerAll16_16t 1_3: -1526681073
-      cPlayerAll16_16t 1_4: -182591838
-      cPlayerAll16_16t 1_1: 2037875319
+      BoneDeath32_18 1_1: -856600500
+      BoneDeath32_18 1_4: 739517090
+      BoneDeath32_18 1_5: -499809876
+      BoneDeath32_18 1_3: -2107585798
+      BoneDeath32_18 1_2: -2064797831
+      BoneDeath32_18 1_0: -1763027310
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
