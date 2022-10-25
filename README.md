@@ -1,4 +1,4 @@
-# GP_ItsAKnightTimes
+# ItsAKnightTimes
 
 - just nothing
 - 2D Rogue like game
